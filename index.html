@@ -8,16 +8,27 @@
   <style>
     body {
       background-color: #f1f1f6;
-      font-family: Arial, sans-serif;
+      font-family: "Segoe UI", Arial, sans-serif;
     }
     .container {
       max-width: 500px;
       margin: 40px auto;
       text-align: center;
     }
+    h2 {
+      font-size: 1.6rem;
+      color: #333;
+    }
     .btn-custom {
       margin: 10px 0;
       font-size: 1.1rem;
+      padding: 12px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .btn-custom:hover {
+      transform: scale(1.03);
     }
     .profile-img {
       width: 150px;
@@ -25,18 +36,34 @@
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 20px;
+      border: 3px solid #ddd;
     }
     .footer-img {
       width: 100%;
       margin-top: 30px;
       border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 200px;
+      margin: 10px;
+      border-radius: 8px;
+    }
+    .gallery iframe {
+      width: 100%;
+      height: 200px;
+      max-width: 300px;
+      margin: 10px;
+      border-radius: 8px;
+      border: none;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <!-- Imagem do topo -->
-    <img src="AlunoBglaucio.jpg" alt="AlunoBglaucio.jpg" class="profile-img">
+    <img src="AlunoBglaucio.jpg" alt="AlunoBglaucio" class="profile-img">
 
     <h2 class="my-3">🌟 <strong>Links Bruno Glaucio</strong></h2>
 
@@ -47,6 +74,29 @@
     <a href="https://www.youtube.com/playlist?list=PLMpm7TmHkf2iFK-g2PCmS5Wc94MZwaO4B" class="btn btn-outline-warning w-100 btn-custom" target="_blank">
       ✂️ Curso de Cabeleireiro
     </a>
+
+    <!-- Novo botão Curso de Designer de Sobrancelhas -->
+    <button class="btn btn-outline-dark w-100 btn-custom" type="button" data-bs-toggle="collapse" data-bs-target="#sobrancelhas" aria-expanded="false" aria-controls="sobrancelhas">
+      💄 Curso de Designer de Sobrancelhas
+    </button>
+
+    <!-- Área oculta que abre ao clicar -->
+    <div class="collapse mt-3" id="sobrancelhas">
+      <div class="card card-body">
+        <h5>📷 Fotos do Curso</h5>
+        <div class="gallery d-flex flex-wrap justify-content-center">
+          <!-- Troque essas imagens para as que quiser -->
+          <img src="sobrancelha-foto1.jpg" alt="Foto Sob 1">
+          <img src="sobrancelha-foto2.jpg" alt="Foto Sob 2">
+        </div>
+        <h5 class="mt-3">🎥 Vídeos do Curso (YouTube)</h5>
+        <div class="gallery d-flex flex-wrap justify-content-center">
+          <!-- Exemplos de vídeos embutidos do YouTube: -->
+          <iframe src="https://www.youtube.com/embed/ID_DO_VIDEO1" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/ID_DO_VIDEO2" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
 
     <a href="https://www.youtube.com/playlist?list=PLMpm7TmHkf2hEBxsKxPn5PAKy7kLDoAgE" class="btn btn-outline-danger w-100 btn-custom" target="_blank">
       🚴‍♂️ Pedaladas de Bike
@@ -61,9 +111,9 @@
     </a>
 
     <!-- Imagem do rodapé -->
-    <img src="MeusMateriais1.jpg" alt="MeusMateriais1.jpg" class="footer-img">
+    <img src="MeusMateriais1.jpg" alt="MeusMateriais1" class="footer-img">
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
